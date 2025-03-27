@@ -22,14 +22,23 @@ class StorePage extends StatelessWidget {
           children: [
             // Text
             // Image
-            Row(
-              children: [
-                Text('Woman'),
-                Text('Kids'),
-                Text('Shoes'),
-                Text('Bag'),
-              ],
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                children: [
+                  Text('Woman', style: TextStyle(fontWeight: FontWeight.bold)),
+                  Spacer(flex: 1),
+                  Text('Kids', style: TextStyle(fontWeight: FontWeight.bold)),
+                  Spacer(flex: 1),
+                  Text('Shoes', style: TextStyle(fontWeight: FontWeight.bold)),
+                  Spacer(flex: 1),
+                  Text('Bag', style: TextStyle(fontWeight: FontWeight.bold)),
+                  Spacer(flex: 1),
+                ],
+              ),
             ),
+            Expanded(child: Image.asset('assets/bag.jpg')),
+            Expanded(child: Image.asset('assets/shoes.jpg')),
           ],
         ),
       ),
