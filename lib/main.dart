@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: StorePage());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: StorePage());
   }
 }
 
@@ -22,23 +22,32 @@ class StorePage extends StatelessWidget {
           children: [
             // Text
             // Image
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              child: Row(
-                children: [
-                  Text('Woman', style: TextStyle(fontWeight: FontWeight.bold)),
-                  Spacer(flex: 1),
-                  Text('Kids', style: TextStyle(fontWeight: FontWeight.bold)),
-                  Spacer(flex: 1),
-                  Text('Shoes', style: TextStyle(fontWeight: FontWeight.bold)),
-                  Spacer(flex: 1),
-                  Text('Bag', style: TextStyle(fontWeight: FontWeight.bold)),
-                  Spacer(flex: 1),
-                ],
+            SizedBox(
+              height: 70,
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: Row(
+                  children: [
+                    Text(
+                      'Woman',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    Spacer(flex: 1),
+                    Text('Kids', style: TextStyle(fontWeight: FontWeight.bold)),
+                    Spacer(flex: 1),
+                    Text(
+                      'Shoes',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    Spacer(flex: 1),
+                    Text('Bag', style: TextStyle(fontWeight: FontWeight.bold)),
+                    Spacer(flex: 1),
+                  ],
+                ),
               ),
             ),
-            Expanded(child: Image.asset('assets/bag.jpg')),
-            Expanded(child: Image.asset('assets/shoes.jpg')),
+            Expanded(child: Image.asset('assets/bag.jpg', fit: BoxFit.cover)),
+            Expanded(child: Image.asset('assets/shoes.jpg', fit: BoxFit.cover)),
           ],
         ),
       ),
